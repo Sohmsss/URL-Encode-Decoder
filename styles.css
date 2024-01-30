@@ -1,0 +1,73 @@
+.page {
+    background-color: rgb(46, 59, 116);
+}
+
+.tool-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+.tool-area {
+    background-color: white;
+    padding: 30px;
+    border-radius: 7px;
+    width: 80%;
+}
+
+.tool-input input {
+    width: 100%;
+    height: 80px;
+    padding: 5px;
+    margin-bottom: 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 1px 4px 15px;
+    border: 01px solid rgb(221, 221, 221);
+    border-radius: 5px;
+    align-items: center;
+}
+
+.tool-output input {
+    width: 100%;
+    height: 80px;
+    padding: 5px;
+    margin-bottom: 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 1px 4px 15px;
+    border: 01px solid rgb(221, 221, 221);
+    border-radius: 5px;
+    align-items: center;
+}
+
+.btn-primary {
+    background-color: rgb(46, 59, 116);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.btn-primary:hover {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-primary:active {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.radio-container {
+    padding: 0 10px 10px 0px;
+}
+
+
