@@ -11,7 +11,7 @@ $(document).ready(function () {
             if (this.checked) {
                 decodeToggle.checked = false;
                 $('.btn-primary').text('Encode'); 
-                $('#text-output').attr('placeholder', 'Encoded text will appear here')
+                $('#textoutput').attr('placeholder', 'Encoded text will appear here')
                 $('#textinput').attr('placeholder', 'Text to be encoded')
             }
         });
