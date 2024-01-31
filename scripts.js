@@ -1,5 +1,10 @@
 $(document).ready(function () {
 
+    $('textarea').on('input', function () {
+        this.style.height = 'auto';
+        this.style.height = (this.scrollHeight) + 'px';
+    });
+
     function toggleRadioButtons() {
         var encodeToggle = document.getElementById('encode-toggle');
         var decodeToggle = document.getElementById('decode-toggle');
