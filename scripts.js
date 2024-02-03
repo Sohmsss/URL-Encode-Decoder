@@ -30,7 +30,6 @@ $(document).ready(function () {
     function setCookieConsent(necessary, analytics) {
         localStorage.setItem('cookieConsent', JSON.stringify({necessary: necessary, analytics: analytics}));
         document.getElementById('cookieConsentBanner').style.display = 'none';
-        document.getElementById('cookieSettingsPanel').style.display = 'none';
     }
     
     window.onload = function() {
