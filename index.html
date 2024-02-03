@@ -15,7 +15,11 @@
         type="image/x-icon">
     <meta name="description" content="Simple tool for encoding or decoding text">
     <script>
-        $(document).ready(function () {
+         function userHasConsented() {
+            var consent = JSON.parse(localStorage.getItem('cookieConsent'));
+            return consent && consent.analytics;
+        }
+        document.addEventListener("DOMContentLoaded", function() {
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
     
@@ -34,10 +38,6 @@
             document.getElementById('cookieConsentBanner').style.display = 'block';
         }
     
-        function userHasConsented() {
-            var consent = JSON.parse(localStorage.getItem('cookieConsent'));
-            return consent && consent.analytics;
-        }
     });
     </script>
 </head>
