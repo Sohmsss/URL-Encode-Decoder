@@ -6,11 +6,27 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-0V3MP2TH6L"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'G-0V3MP2TH6L');
+        function gtag(){dataLayer.push(arguments);}
+    
+        if (userHasConsented()) {
+            var script = document.createElement('script');
+            script.async = true;
+            script.src = 'https://www.googletagmanager.com/gtag/js?id=G-0V3MP2TH6L';
+            document.head.appendChild(script);
+    
+            script.onload = function() {
+                gtag('js', new Date());
+                gtag('config', 'G-0V3MP2TH6L');
+            };
+            console.log('User has consented to analytics')
+        }
+    
+        function userHasConsented() {
+            var consent = JSON.parse(localStorage.getItem('cookieConsent'));
+            return consent && consent.analytics;
+        }
     </script>
+    
     <title>URL Encoder / Decoder</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -69,6 +85,21 @@
             </div>
     </main>
     <footer>
+        <div id="cookieConsentBanner" class="cookie-consent-banner">
+            <p>This website uses cookies to ensure you get the best experience on our website.</p>
+            <div class="cookie-buttons">
+                <button id="acceptAllCookies" class="cookies-button">Accept All</button>
+                <button id="cookieSettings" class="cookies-button">Settings</button>
+            </div>
+        </div>
+        <div id="cookieSettingsPanel" class="cookie-settings-panel">
+            <p>Customize your cookie settings:</p>
+            <div>
+                <input type="checkbox" id="analyticsCookies" name="analyticsCookies">
+                <label for="analyticsCookies">Analytics Cookies</label>
+            </div>
+            <button id="saveCookieSettings">Save Settings</button>
+        </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"

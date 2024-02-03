@@ -1,5 +1,54 @@
 $(document).ready(function () {
 
+    function loadGoogleAnalytics() {
+        if (!window.ga) { 
+            var script = document.createElement('script');
+            script.async = true;
+            script.src = 'https://www.googletagmanager.com/gtag/js?id=G-0V3MP2TH6L';
+            document.head.appendChild(script);
+    
+            script.onload = function() {
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+    
+                gtag('config', 'G-0V3MP2TH6L');
+            };
+        }
+    }
+    
+    if (userHasConsented()) {
+        loadGoogleAnalytics();
+    }
+
+    document.getElementById('acceptAllCookies').addEventListener('click', function() {
+        setCookieConsent(true, true);
+        console.log('logging accepted consent');
+        loadGoogleAnalytics(); 
+    });
+    
+    document.getElementById('cookieSettings').addEventListener('click', function() {
+        document.getElementById('cookieSettingsPanel').style.display = 'block'; 
+    });
+    
+    document.getElementById('saveCookieSettings').addEventListener('click', function() {
+        var analyticsConsent = document.getElementById('analyticsCookies').checked;
+        setCookieConsent(true, analyticsConsent); 
+    });
+    
+    function setCookieConsent(necessary, analytics) {
+        localStorage.setItem('cookieConsent', JSON.stringify({necessary: necessary, analytics: analytics}));
+        document.getElementById('cookieConsentBanner').style.display = 'none';
+        document.getElementById('cookieSettingsPanel').style.display = 'none';
+    }
+    
+    window.onload = function() {
+        var consent = localStorage.getItem('cookieConsent');
+        if (!consent) {
+            document.getElementById('cookieConsentBanner').style.display = 'block';
+        }
+    };    
+
     $('textarea').on('input', function () {
         this.style.height = 'auto';
         this.style.height = (this.scrollHeight) + 'px';

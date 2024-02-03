@@ -93,3 +93,34 @@
 .navbar {
     background-color: rgb(46, 59, 116);
 }
+
+.cookie-consent-banner {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    display: none; 
+}
+.cookie-buttons button {
+    margin: 5px;
+}
+
+.cookie-settings-panel {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    display: none; 
+}
+
+.cookies-button {
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(46, 59, 116);
+    padding: 10px 20px;
+    color: #fff
+}
