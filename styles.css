@@ -72,4 +72,22 @@
     padding: 0 10px 10px 0px;
 }
 
+.form-check-input:checked {
+    background-color: rgb(46, 59, 116);
+    border-color: rgb(46, 59, 116);
+}
 
+.form-check-label {
+    margin-left: 5px;
+    color: #333; 
+}
+
+.github{
+    height: 50px;
+    width: 50px;
+    margin: 30px;
+}
+
+.navbar {
+    background-color: rgb(46, 59, 116);
+}

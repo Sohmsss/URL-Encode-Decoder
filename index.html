@@ -8,10 +8,18 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
     <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="/assets/DALL·E 2024-02-03 11.11.31 - Design a sleek, modern favicon for a URL encoder and decoder tool. The icon should feature a stylized globe to represent the web, intertwined with a l.webp" type="image/x-icon">
 </head>
 
 <body>
     <header>
+        <div class="navbar">
+            <div class="giticon">
+                <a href="https://github.com/Sohmsss/URL-Encode-Decoder" target="_blank">
+                    <img src="/assets/kisspng-github-pages-logo-repository-fork-github-logo-1-magentys-5b69de71b51265.8586076615336648817417.png" class="github" alt="GitHub" />
+                </a>
+            </div>
+        </div>
     </header>
     <main>
         <div class="page">
@@ -27,10 +35,14 @@
                         <textarea name="text-output" id="textoutput" placeholder="Encoded text will appear here" readonly></textarea>
                     </div>
                     <div class="radio-container">
-                        <input type="radio" name="encode-toggle" id="encode-toggle">
-                        <label for="encode-toggle" class="encode-toggle">Encode</label>
-                        <input type="radio" name="decode-toggle" id="decode-toggle">
-                        <label for="encode-toggle" class="decode-toggle">Decode</label>
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" id="encode-toggle">
+                            <label class="form-check-label" for="encode-toggle">Encode</label>
+                        </div>
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" id="decode-toggle">
+                            <label class="form-check-label" for="decode-toggle">Decode</label>
+                        </div>
                     </div>
                     <div class="button">
                     <button type="submit" class="btn btn-primary">
