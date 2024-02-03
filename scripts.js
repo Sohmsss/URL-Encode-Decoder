@@ -27,15 +27,6 @@ $(document).ready(function () {
         loadGoogleAnalytics(); 
     });
     
-    document.getElementById('cookieSettings').addEventListener('click', function() {
-        document.getElementById('cookieSettingsPanel').style.display = 'block'; 
-    });
-    
-    document.getElementById('saveCookieSettings').addEventListener('click', function() {
-        var analyticsConsent = document.getElementById('analyticsCookies').checked;
-        setCookieConsent(true, analyticsConsent); 
-    });
-    
     function setCookieConsent(necessary, analytics) {
         localStorage.setItem('cookieConsent', JSON.stringify({necessary: necessary, analytics: analytics}));
         document.getElementById('cookieConsentBanner').style.display = 'none';
