@@ -19,6 +19,8 @@
                 gtag('config', 'G-0V3MP2TH6L');
             };
             console.log('User has consented to analytics')
+        } else {
+            document.getElementById('cookieConsentBanner').style.display = 'block';
         }
     
         function userHasConsented() {
