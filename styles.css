@@ -107,16 +107,6 @@
     margin: 5px;
 }
 
-.cookie-settings-panel {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background-color: #fff;
-    padding: 20px;
-    text-align: center;
-    display: none; 
-}
-
 .cookies-button {
     border-radius: 5px;
     border: none;
